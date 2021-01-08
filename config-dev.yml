@@ -1,11 +1,4 @@
-#logging:
-#  level:
-#    com.lsp: trace
 
-# 在控制台输出的日志的格式
-spring:
-  application:
-    name: cloud-payment-service #服务名称
   datasource:
     username: root
     password: root #连接本地linux系统中的docker中的mysql数据库
