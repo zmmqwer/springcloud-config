@@ -1,4 +1,10 @@
- datasource:
+
+
+# 在控制台输出的日志的格式
+spring:
+  application:
+    name: cloud-payment-service #服务名称
+  datasource:
     username: root
     password: root #连接本地linux系统中的docker中的mysql数据库
     url: jdbc:mysql://localhost:3306/springclouddb?serverTimezone=UTC
@@ -55,6 +61,9 @@ eureka:
   #server:
   #  enable-self-preservation: false #禁用自我保护模式
   #  eviction-interval-timer-in-ms: 60000
+
+
+
 
 
 
