@@ -1,5 +1,3 @@
-server:
-  port: 8001  #端口号
 #logging:
 #  level:
 #    com.lsp: trace
