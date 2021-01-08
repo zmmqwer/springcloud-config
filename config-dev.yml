@@ -27,38 +27,6 @@ spring:
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
 
-mybatis:
-  # 指定全局配置文件位置
-  config-location: classpath:mybatis/mybatis-config.xml
-  # 指定sql映射文件位置
-  mapper-locations: classpath:mybatis/mapper/*.xml
-  type-aliases-package: com.zmm.entities #所有Entity别名类所在包
-eureka:
-  # 每个EurekaServer 都包含一个EurekaClient，用于请求其他节同步
-  client:
-    #表示是否将自己注册EurekaServer
-    registerWithEureka: true
-    #是否从EurekaServer抓取已有的注册信息，默认为true，单节点我所谓，集群必须设置为true才能配合ribbn使用负载均衡
-    fetchRegistry: true
-    service-url:
-      #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址，如果服务器是集群就用    ， 号分割地址
-      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/
-    eureka-server-connect-timeout-seconds: 60
-    eureka-server-read-timeout-seconds: 60
-
-  instance:
-    prefer-ip-address: true #是否将自己IP地址注册到Eureka
-    ip-address: 127.0.0.1
-    # 指定实例名称，默认：${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${server.port}}}
-    instance-id: ${spring.application.name}:${server.port}
-    lease-expiration-duration-in-seconds: 30 #续约更新时间间隔（默认30秒）
-    lease-renewal-interval-in-seconds: 10 #续约到期时间
-    #    leaserenewalintervalinseconds: 10 #心跳时间
-
-
-  #server:
-  #  enable-self-preservation: false #禁用自我保护模式
-  #  eviction-interval-timer-in-ms: 60000
 
 
 
